@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .contact {
+        margin-inline: 20rem;
+      }
+
+      @media (max-width: 645px) {
+        .contact {
+          margin: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="contact-form flex justify-center items-center h-screen bg-sky-100"
+      id="contact-form"
+    >
+      <div class="contact p-6 h-auto bg-white w-full">
+        <h1 class="text-2xl text-center">Login</h1>
+        <div class="details">
+          <h3 class="text-xl pt-4">Name</h3>
+          <input
+            type="text"
+            id="name"
+            placeholder="Enter your name"
+            class="border w-full p-2 rounded-xl mt-2 outline-sky-100"
+          />
+        </div>
+        <div class="details">
+          <h3 class="text-xl pt-4">Email</h3>
+          <input
+            type="email"
+            id="email"
+            placeholder="Enter your email"
+            class="border w-full p-2 rounded-xl mt-2 outline-sky-100"
+          />
+        </div>
+        <div class="details">
+          <h3 class="text-xl pt-4">Password</h3>
+          <input
+            type="password"
+            id="password"
+            placeholder="Enter your password"
+            class="border w-full p-2 rounded-xl mt-2 outline-sky-100"
+          />
+        </div>
+        <div class="details mt-2 flex gap-2">
+          <input
+            type="checkbox"
+            name="checkbox"
+            id="checkbox"
+            class="cursor-pointer"
+            onclick="handleclick()"
+          />
+          <p>Show Password</p>
+        </div>
+        <div class="details mt-4">
+          <input
+            type="submit"
+            value="Submit"
+            class="bg-sky-200 p-2 rounded-xl text-gray-900 w-40 cursor-pointer"
+          />
+        </div>
+      </div>
+    </div>
+    <script>
+      function handleclick() {
+        const password = document.getElementById("password");
+        password.type === "password"
+          ? (password.type = "text")
+          : (password.type = "password");
+      }
+    </script>
+  </body>
+</html>
