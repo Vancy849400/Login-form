@@ -1,0 +1,17 @@
+function handleclick() {
+  const password = document.getElementById("password");
+  password.type === "password"
+    ? (password.type = "text")
+    : (password.type = "password");
+}
+
+const isLoggedIn = true;
+const details = document.getElementById("details");
+const btn = document.getElementById("btn");
+const head = document.getElementById("head");
+
+isLoggedIn && details.remove();
+
+isLoggedIn ? (head.innerHTML = "Login") : (head.innerHTML = "Sign In");
+
+isLoggedIn ? (btn.innerHTML = "Login") : (btn.innerHTML = "Register");
