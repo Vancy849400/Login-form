@@ -5,7 +5,7 @@ function handleclick() {
     : (password.type = "password");
 }
 
-const isLoggedIn = true;
+const isLoggedIn = false;
 const details = document.getElementById("details");
 const btn = document.getElementById("btn");
 const head = document.getElementById("head");
@@ -15,3 +15,5 @@ isLoggedIn && details.remove();
 isLoggedIn ? (head.innerHTML = "Login") : (head.innerHTML = "Sign In");
 
 isLoggedIn ? (btn.innerHTML = "Login") : (btn.innerHTML = "Register");
+
+
