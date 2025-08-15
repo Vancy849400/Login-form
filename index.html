@@ -8,6 +8,22 @@
     <style>
       .contact {
         margin-inline: 30rem;
+        animation-name: fade-in;
+        animation-duration: 2s;
+        transition: ease 2s;
+        transform: translate();
+      }
+
+      @keyframes fade-in {
+        0% {
+          opacity: 0;
+        }
+        50% {
+          opacity: 0.5;
+        }
+        100% {
+          opacity: 1;
+        }
       }
 
       @media (max-width: 645px) {
